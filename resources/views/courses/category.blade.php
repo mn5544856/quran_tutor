@@ -4,11 +4,11 @@
     use Illuminate\Support\Str;
 @endphp
 
-@section('title', $categoryTitle . ' Online Quran Courses | Learn Quran with Expert Teachers - Ilm-e-Quran')
+@section('title', $categoryTitle . ' Online Ilm e Quran | Learn Quran with Expert Teachers - Ilm-e-Quran')
 
 @section('meta_description', $categoryTitle . ' Quran courses at Ilm-e-Quran. Learn Quran online with expert teachers in Tajweed, Hifz, Noorani Qaida and Quran reading. Flexible schedules for kids and adults worldwide.')
 
-@section('meta_keywords', $categoryTitle . ', online Quran courses, Noorani Qaida, Tajweed, Hifz, Quran learning, Ilm-e-Quran')
+@section('meta_keywords', $categoryTitle . ', Online Ilm e Quran, Noorani Qaida, Tajweed, Hifz, Quran learning, Ilm-e-Quran')
 
 @section('content')
 
@@ -17,7 +17,7 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
 
         <h1 class="text-3xl md:text-5xl font-bold leading-tight">
-            {{ $categoryTitle }} Online Quran Courses
+            {{ $categoryTitle }} Online Ilm e Quran
         </h1>
 
         <p class="mt-4 text-white/80 text-base md:text-lg max-w-2xl mx-auto">

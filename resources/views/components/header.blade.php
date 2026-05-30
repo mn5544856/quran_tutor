@@ -10,16 +10,16 @@
             <!-- LOGO (SEO: HOME LINK + BRAND SIGNAL) -->
             <!-- LOGO -->
             <a href="{{ route('home') }}" class="flex items-center gap-2 text-white hover:opacity-90 transition"
-                aria-label="Go to Ilm E Quran Home">
+                aria-label="Go to Ilm e Quran Home">
 
 <img 
     src="{{ asset('images/logo.svg') }}" 
-    alt="Ilm E Quran Logo"
+    alt="Ilm e Quran Logo"
     class="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
 />
 
                 <span class="text-xl md:text-2xl font-bold text-yellow-300">
-                    Ilm E Quran
+                    Ilm e Quran
                 </span>
             </a>
 
@@ -31,7 +31,7 @@
                 </a>
 
                 <a href="{{ route('courses.index') }}" class="text-white font-medium hover:text-gold transition">
-                    Online Quran Courses
+                    Online Ilm e Quran
                 </a>
 
                 <a href="{{ route('how-it-works.index') }}" class="text-white font-medium hover:text-gold transition">
@@ -74,7 +74,7 @@
                 </a>
 
                 <a href="{{ route('courses.index') }}" class="text-white font-medium hover:text-gold py-2">
-                    Online Quran Courses
+                    Online Ilm e Quran
                 </a>
 
                 <a href="{{ route('how-it-works.index') }}" class="text-white font-medium hover:text-gold py-2">
@@ -141,7 +141,7 @@
 
 🔥 IMPORTANT SEO IMPROVEMENTS (SHORT LIST)
 ✅ 1. Internal Linking SEO strong kiya
-"Courses" → Online Quran Courses keyword optimized
+"Courses" → Online Ilm e Quran keyword optimized
 ✅ 2. Accessibility improved
 aria-label
 aria-expanded

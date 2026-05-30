@@ -14,14 +14,14 @@
     
     <img 
     src="https://ilmequran.com/images/logo.svg"
-    alt="Ilm E Quran Logo"
+    alt="Ilm e Quran Logo"
     width="120"
     height="48"
     class="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
 >
 
     <h3 class="text-white text-lg sm:text-xl font-bold border-l-4 border-gold pl-3 leading-tight">
-        Ilm E Quran Online Quran Academy
+        Ilm e Quran Online Quran Academy
     </h3>
 
 </div>
@@ -70,7 +70,7 @@
                     <li><a href="{{ route('home') }}" class="hover:text-gold transition">Home</a></li>
 
                     <li><a href="{{ route('courses.index') }}" class="hover:text-gold transition">
-                        Online Quran Courses
+                        Online Ilm e Quran
                     </a></li>
 
                     <li><a href="{{ route('how-it-works.index') }}" class="hover:text-gold transition">
@@ -168,7 +168,7 @@
         <div class="border-t border-white/10 pt-6 text-center text-sm text-gray-400">
 
             <p>
-                © {{ date('Y') }} Ilm E Quran Online Quran Academy. All Rights Reserved.
+                © {{ date('Y') }} Ilm e Quran Online Quran Academy. All Rights Reserved.
             </p>
 
         </div>
@@ -179,11 +179,11 @@
 <!-- 
 🔥 SEO IMPROVEMENTS DONE (IMPORTANT)
 ✅ 1. Brand authority improved
-“Ilm E Quran Online Quran Academy” → stronger entity signal
+“Ilm e Quran Online Quran Academy” → stronger entity signal
 ✅ 2. Internal linking SEO boost
 Courses, categories, and pages properly linked
 ✅ 3. Keyword anchors optimized
-“Online Quran Courses” instead of generic “Courses”
+“Online Ilm e Quran” instead of generic “Courses”
 ✅ 4. Local trust signals
 Email + phone + 24/7 support = E-E-A-T boost
 ✅ 5. Accessibility SEO

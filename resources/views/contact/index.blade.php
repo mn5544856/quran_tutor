@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us - Ilm E Quran Quran Academy')
+@section('title', 'Contact Us - Ilm e Quran Quran Academy')
 
 @section('content')
 
