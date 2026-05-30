@@ -10,9 +10,9 @@
          <div class="absolute inset-0 opacity-20">
         <picture>
             <source media="(max-width: 768px)"
-                srcset="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?auto=format&fit=crop&w=600&q=70">
+                srcset="https://images.pexels.com/photos/14743719/pexels-photo-14743719.jpeg">
 
-            <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?auto=format&fit=crop&w=900&q=70"
+            <img src="https://images.pexels.com/photos/14743719/pexels-photo-14743719.jpeg"
                 class="w-full h-full object-cover"
                 loading="eager"
                 fetchpriority="high"

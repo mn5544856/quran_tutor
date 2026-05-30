@@ -10,7 +10,7 @@
 
 <!-- HERO SECTION -->
 <section class="relative overflow-hidden text-white py-16 md:py-24 bg-cover bg-center"
-    style="background-image: linear-gradient(rgba(5,46,22,0.88), rgba(21,128,61,0.88)), url('https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+    style="background-image: linear-gradient(rgba(5,46,22,0.88), rgba(21,128,61,0.88)), url('https://images.pexels.com/photos/14743719/pexels-photo-14743719.jpeg');">
     <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
         <span class="inline-block bg-yellow-400 text-green-900 text-sm font-semibold px-4 py-2 rounded-full mb-6 shadow">Trusted By Students Worldwide</span>
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Learn Quran Online With <br><span class="text-yellow-300">Expert Quran Teachers</span></h1>
