@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+/* Add typography plugin here */
+@plugin '@tailwindcss/typography';
+
+/* Any other custom CSS below */
