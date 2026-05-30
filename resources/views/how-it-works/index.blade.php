@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'How It Works | Online Quran Learning Process - Al-Madinah Quran Academy')
+@section('title', 'How It Works | Online Quran Learning Process - Ilm e Quran Quran Academy')
 
-@section('meta_description', 'Learn how online Quran classes work at Al-Madinah Quran Academy. Simple 3-step process: free trial, teacher introduction, and personalized Quran learning with expert tutors.')
+@section('meta_description', 'Learn how online Quran classes work at Ilm e Quran Quran Academy. Simple 3-step process: free trial, teacher introduction, and personalized Quran learning with expert tutors.')
 
 @section('meta_keywords', 'how Quran classes work, online Quran learning process, Quran academy steps, free Quran trial, Quran teacher online, Tajweed learning process, Hifz online classes')
 

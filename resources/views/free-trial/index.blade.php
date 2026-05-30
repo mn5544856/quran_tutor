@@ -2,7 +2,7 @@
 
 @section('title', 'Free Quran Trial Class Online | Ilm e Quran Academy')
 
-@section('meta_description', 'Book a free online Quran trial class with expert teachers at Al-Madinah Quran Academy. Learn Tajweed, Hifz, and Quran reading with personalized one-on-one sessions worldwide.')
+@section('meta_description', 'Book a free online Quran trial class with expert teachers at Ilm e Quran Quran Academy. Learn Tajweed, Hifz, and Quran reading with personalized one-on-one sessions worldwide.')
 
 @section('meta_keywords', 'free Quran trial class, online Quran trial, Quran academy, Quran teacher online, Tajweed trial class, Hifz trial class, Quran learning free class')
 
