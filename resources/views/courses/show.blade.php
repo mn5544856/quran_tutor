@@ -7,7 +7,7 @@
     $courseUrl = url()->current();
 @endphp
 
-@section('title', $course->title . ' | Online Quran Course - Ilm e Qruan Academy')
+@section('title', $course->title . ' | Online Quran Course - Al-Madinah Quran Academy')
 
 @section('meta_description', Str::limit(strip_tags($course->short_description), 160))
 

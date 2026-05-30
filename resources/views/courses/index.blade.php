@@ -4,9 +4,9 @@
     use Illuminate\Support\Str;
 @endphp
 
-@section('title', 'Online Quran Courses | Tajweed, Hifz & Noorani Qaida - Ilm e Qruan Academy')
+@section('title', 'Online Quran Courses | Tajweed, Hifz & Noorani Qaida - Al-Madinah Quran Academy')
 
-@section('meta_description', 'Join Ilm e Qruan Academy for online Quran courses including Tajweed, Hifz, Noorani Qaida, Quran Reading, and Islamic Studies. One-on-one live classes for kids and adults worldwide.')
+@section('meta_description', 'Join Al-Madinah Quran Academy for online Quran courses including Tajweed, Hifz, Noorani Qaida, Quran Reading, and Islamic Studies. One-on-one live classes for kids and adults worldwide.')
 
 @section('meta_keywords', 'online Quran classes, Quran academy, Tajweed course, Hifz classes, Noorani Qaida, Quran teacher online, Quran lessons for kids, Quran learning academy')
 
@@ -307,7 +307,7 @@
         <div class="max-w-7xl mx-auto px-4 text-center">
 
             <h2 class="text-4xl font-bold text-green-900 mb-4">
-                Why Choose Ilm e Qruan Academy?
+                Why Choose Al-Madinah Quran Academy?
             </h2>
 
             <p class="text-gray-600 max-w-2xl mx-auto mb-14">
