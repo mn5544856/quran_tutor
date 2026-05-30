@@ -17,7 +17,7 @@
                 @if(isset($search))
                     {{ $posts->total() }} articles found
                 @else
-                    Islamic articles, Quran lessons, and more
+                    Islamic articles, Ilm e Quran lessons, and more
                 @endif
             </p>
         </div>

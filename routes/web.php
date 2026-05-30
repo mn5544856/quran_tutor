@@ -23,19 +23,10 @@ use App\Models\Course;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-/* Legacy /home redirects */
-Route::permanentRedirect('/home', '/');
-Route::permanentRedirect('/home/', '/');
-
-/* Legacy /home/feed redirects */
-Route::permanentRedirect('/home/feed', '/');
-Route::permanentRedirect('/home/feed/', '/');
-
-/* Catch-all for any /home/* or /home/feed/* URLs */
+/* HOME legacy cleanup — SINGLE SOURCE OF TRUTH */
 Route::get('/home/{any?}', function () {
     return redirect('/', 301);
 })->where('any', '.*');
-
 /*
 |--------------------------------------------------------------------------
 | About
@@ -171,8 +162,8 @@ Route::get('/generate-sitemap', function () {
 */
 
 /* Author + Category */
-Route::permanentRedirect('/author/{slug}', '/');
-Route::permanentRedirect('/category/{slug}', '/');
+// Route::permanentRedirect('/author/{slug}', '/');
+// Route::permanentRedirect('/category/{slug}', '/');
 
 /* Static pages */
 Route::permanentRedirect('/disclaimer', '/');

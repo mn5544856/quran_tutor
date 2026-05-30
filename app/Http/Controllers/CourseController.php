@@ -49,22 +49,25 @@ class CourseController extends Controller
     /**
      * Category filter page
      */
-    public function byCategory(string $slug)
+  public function byCategory(string $slug)
 {
+    
     $categoryMap = [
-        'quran-basics' => 'Quran Reading Basics',
-        'tajweed' => 'Tajweed & Recitation',
-        'hifz' => 'Quran Memorization (Hifz)',
+        // BASIC
+        'basic' => 'Basic',
 
+        // ADVANCED
+        'advanced' => 'Advanced',
     ];
 
     abort_if(!isset($categoryMap[$slug]), 404);
 
     $courses = Course::query()
         ->select('id', 'title', 'slug', 'image_url', 'category')
-        ->where('category', $categoryMap[$slug])
+        ->where('category', $categoryMap[$slug]) // 👈 recommended (use level column)
         ->latest()
-        ->paginate(12); // 👈 pagination added
+        ->paginate(12);
+
     return view('courses.category', [
         'courses' => $courses,
         'categoryTitle' => $categoryMap[$slug],
