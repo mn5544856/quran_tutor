@@ -100,24 +100,24 @@
                 <ul class="space-y-2">
 
                     <li>
-                        <a href="{{ route('courses.category', 'quran-basics') }}" class="hover:text-gold transition">
+                        <a href="{{ route('courses.show', 'quran-reading-course') }}" class="hover:text-gold transition">
                             Quran Reading Basics
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('courses.category', 'tajweed') }}" class="hover:text-gold transition">
+                        <a href="{{ route('courses.show', 'tajweed-recitation') }}" class="hover:text-gold transition">
                             Tajweed & Recitation
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('courses.category', 'hifz') }}" class="hover:text-gold transition">
+                        <a href="{{ route('courses.show', 'quran-memorization-hifz') }}" class="hover:text-gold transition">
                             Quran Memorization (Hifz)
                         </a>
                     </li>
                         <li>
-                        <a href="{{ route('courses.category', 'noorani-qaida') }}" class="hover:text-gold transition">
+                        <a href="{{ route('courses.show', 'noorani-qaida-course-basic') }}" class="hover:text-gold transition">
                             Noorani Qaida
                         </a>
                     </li>

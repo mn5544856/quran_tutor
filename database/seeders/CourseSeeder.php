@@ -13,7 +13,7 @@ class CourseSeeder extends Seeder
 
             [
                 'title' => 'Quran Reading Basics',
-                'slug' => 'quran-reading-course/',
+                'slug' => 'quran-reading-course',
                 'short_description' => 'Learn Arabic alphabet and basic Quran reading.',
                 'description' => 'Learn Quran from scratch with proper Arabic pronunciation and basics of reading.',
                 'level' => 'Beginner',
