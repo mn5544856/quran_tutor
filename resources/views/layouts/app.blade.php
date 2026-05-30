@@ -13,7 +13,11 @@
 
     <meta name="description" content="{{ Seo::description($__env->yieldContent('meta_description')) }}">
     <meta name="keywords" content="{{ Seo::keywords($__env->yieldContent('meta_keywords')) }}">
+      <link rel="manifest" href="/site.webmanifest">
 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Ilm-e-Quran">
+    <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="{{ Seo::canonical() }}">
 
     <meta property="og:title" content="{{ Seo::title($__env->yieldContent('title')) }}">
@@ -30,7 +34,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
