@@ -9,9 +9,9 @@ class LibraryController extends Controller
 {
     public function index()
     {
+        
         $featuredBooks = Book::where('is_featured', true)->latest()->take(4)->get();
         $books = Book::latest()->paginate(12);
-        
         return view('library.index', compact('featuredBooks', 'books'));
     }
 

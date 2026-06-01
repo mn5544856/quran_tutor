@@ -44,9 +44,7 @@
                 <a href="{{ route('contact.index') }}" class="text-white font-medium hover:text-gold transition">
                     Contact
                 </a>
-                <a href="{{ route('library.index') }}" class="text-white font-medium hover:text-gold transition">
-                    Library
-                </a>
+            
 
                 <a href="{{ route('free-trial.index') }}"
                     class="bg-yellow-400 text-green-900 font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition shadow-lg hover:scale-105">
@@ -87,9 +85,7 @@
                 <a href="{{ route('contact.index') }}" class="text-white font-medium hover:text-gold py-2">
                     Contact
                 </a>
-                <a href="{{ route('library.index') }}" class="text-white font-medium hover:text-gold py-2">
-                    Library
-                </a>
+               
 
                 <a href="{{ route('free-trial.index') }}"
                     class="bg-yellow-400 text-green-900 font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition shadow-lg hover:scale-105">

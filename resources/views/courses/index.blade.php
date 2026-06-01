@@ -2,7 +2,7 @@
 
 @php use Illuminate\Support\Str; @endphp
 
-@section('title', 'Online Ilm e Quran | Tajweed, Hifz & Noorani Qaida - Ilm e Quran Quran Academy')
+@section('title', 'Online Quran Courses: Tajweed, Hifz & Noorani Qaida')
 @section('meta_description', 'Join Ilm e Quran Quran Academy for Online Ilm e Quran including Tajweed, Hifz, Noorani Qaida, and Islamic Studies. One-on-one live classes for kids and adults worldwide.')
 @section('meta_keywords', 'online Quran classes, Tajweed course, Hifz classes, Noorani Qaida, Quran teacher online')
 

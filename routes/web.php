@@ -32,10 +32,7 @@ Route::get('/home/{any?}', function () {
 | About
 |--------------------------------------------------------------------------
 */
-// Route::redirect('/about-us', '/about', 301);
-Route::get('about', function () {
-    return view('home');
-})->name('about');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -86,11 +83,11 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 | Library
 |--------------------------------------------------------------------------
 */
-Route::get('/library', [LibraryController::class, 'index'])->name('library.index');
-Route::get('/library/category/{category}', [LibraryController::class, 'category'])->name('library.category');
-Route::get('/library/{book}/download', [LibraryController::class, 'download'])->name('library.download');
-Route::get('/library/{book}/read', [LibraryController::class, 'read'])->name('library.read');
-Route::get('/library/{book}', [LibraryController::class, 'show'])->name('library.show');
+// Route::get('/library', [LibraryController::class, 'index'])->name('library.index');
+// Route::get('/library/category/{category}', [LibraryController::class, 'category'])->name('library.category');
+// Route::get('/library/{book}/download', [LibraryController::class, 'download'])->name('library.download');
+// Route::get('/library/{book}/read', [LibraryController::class, 'read'])->name('library.read');
+// Route::get('/library/{book}', [LibraryController::class, 'show'])->name('library.show');
 
 /*
 |--------------------------------------------------------------------------

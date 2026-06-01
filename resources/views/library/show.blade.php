@@ -12,7 +12,6 @@
             <ol class="flex flex-wrap items-center text-sm text-gray-600 gap-1">
                 <li><a href="{{ route('home') }}" class="hover:text-green-700">Home</a></li>
                 <li><span class="mx-1">/</span></li>
-                <li><a href="{{ route('library.index') }}" class="hover:text-green-700">Library</a></li>
                 <li><span class="mx-1">/</span></li>
                 <li class="text-gray-900 font-medium truncate">{{ $book->title }}</li>
             </ol>

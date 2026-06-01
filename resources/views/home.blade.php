@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Ilm e Quran - Online Quran Learning with Personal Teacher')
+@section('title', 'Online Quran Learning with Personal Teacher | Ilm e Quran')
 
 @section('content')
    
