@@ -11,11 +11,10 @@ class Course extends Model
         'slug',
         'short_description',
         'description',
-        'level',
         'duration',
         'price',
         'image_url',
-        'category',
+        'category_id',
         'is_featured',
         'what_you_learn',
         'requirements',
@@ -27,27 +26,23 @@ class Course extends Model
         'what_you_learn' => 'array',
     ];
 
-    /*
-    |---------------------------------------
-    | SCOPES
-    |---------------------------------------
-    */
-
-    // Featured courses
+    // Featured courses scope
     public function scopeFeatured($query)
     {
         return $query->where('is_featured', true);
     }
 
-    // Filter by category
-    public function scopeCategory($query, $category)
+    // Filter by category slug
+    public function scopeCategorySlug($query, $slug)
     {
-        return $query->where('category', $category);
+        return $query->whereHas('category', function ($q) use ($slug) {
+            $q->where('slug', $slug);
+        });
     }
 
-    // Filter by level
-    public function scopeLevel($query, $level)
+    // Relationship with category
+    public function category()
     {
-        return $query->where('level', $level);
+        return $this->belongsTo(CourseCategory::class, 'category_id');
     }
 }

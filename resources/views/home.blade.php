@@ -342,17 +342,8 @@
     </div>
 </section>
 
-
 @endsection
 
 
 
 
-
-<!-- Proper title add kiya gaya
-Meta description keywords optimized hain
-Open Graph + Twitter tags add hain
-Canonical URL add hai
-JSON-LD structured data add hai
-Image alt attribute SEO friendly banaya gaya
-Keywords Quran niche ke according optimize kiye gaye hain -->

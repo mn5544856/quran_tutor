@@ -2,7 +2,7 @@
 
 @section('title', 'Islamic Book Library - Free PDF Downloads')
 @section('meta_description', 'Download free Islamic books in PDF format. Collection of Tafsir, Hadith, Seerah, Fiqh books and more.')
-@section('meta_keywords', 'Islamic books, PDF library, Tafsir, Hadith, Seerah, Fiqh, free downloads')
+@section('meta_keywords', 'ilm e quran, ilm ul quran, Islamic books, PDF library, Tafsir, Hadith, Seerah, Fiqh, free downloads')
 
 @section('content')
 

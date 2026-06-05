@@ -18,7 +18,8 @@ class Post extends Model
         'status',
         'published_at',
         'category_id',
-        'views'
+        'views',
+        'user_id', // Add this if you have user_id column
     ];
 
     protected $casts = [
@@ -28,7 +29,7 @@ class Post extends Model
     // Category relation
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(postCategory::class);
     }
 
     // Tags relation (many-to-many)
@@ -37,10 +38,25 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
-   
     // Published scope
     public function scopePublished($query)
     {
         return $query->where('status', 'published');
+    }
+
+    // Author relation - Only if User model exists
+    public function author()
+    {
+        // Check if User model exists, otherwise return null
+        if (class_exists('App\Models\User')) {
+            return $this->belongsTo(User::class, 'user_id');
+        }
+        return null;
+    }
+    
+    // Alternative: Use this instead of author()
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

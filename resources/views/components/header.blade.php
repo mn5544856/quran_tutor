@@ -132,19 +132,3 @@
 
     });
 </script>
-
-<!-- 
-
-🔥 IMPORTANT SEO IMPROVEMENTS (SHORT LIST)
-✅ 1. Internal Linking SEO strong kiya
-"Courses" → Online Ilm e Quran keyword optimized
-✅ 2. Accessibility improved
-aria-label
-aria-expanded
-role="banner"
-✅ 3. Semantic SEO structure
-<nav aria-label="Main Navigation">
-✅ 4. Branding SEO signal
-Logo link = homepage authority boost
-✅ 5. Mobile UX SEO fix
-Proper menu state tracking -->

@@ -8,7 +8,7 @@
 
 @section('meta_description', $categoryTitle . ' Quran courses at Ilm-e-Quran. Learn Quran online with expert teachers in Tajweed, Hifz, Noorani Qaida and Quran reading. Flexible schedules for kids and adults worldwide.')
 
-@section('meta_keywords', $categoryTitle . ', Online Ilm e Quran, Noorani Qaida, Tajweed, Hifz, Quran learning, Ilm-e-Quran')
+@section('meta_keywords', $categoryTitle . 'ilm e quran,ilm ul quran, Online Ilm e Quran, Noorani Qaida, Tajweed, Hifz, Quran learning, Ilm-e-Quran')
 
 @section('content')
 
@@ -26,22 +26,22 @@
 
         <!-- Category Navigation -->
         <div class="flex flex-wrap justify-center gap-3 mt-8">
-            <a href="{{ route('courses.category', 'quran-basics') }}"
+            <a href="{{ route('courses.categories', 'quran-basics') }}"
                class="px-4 py-2 rounded-lg border border-white/30 bg-white/10 hover:bg-white/20 transition-all duration-300 text-sm md:text-base {{ $categoryTitle == 'Quran Basics' ? 'bg-white/30' : '' }}">
                 Quran Basics
             </a>
 
-            <a href="{{ route('courses.category', 'noorani-qaida') }}"
+            <a href="{{ route('courses.categories', 'noorani-qaida') }}"
                class="px-4 py-2 rounded-lg border border-white/30 bg-white/10 hover:bg-white/20 transition-all duration-300 text-sm md:text-base {{ $categoryTitle == 'Noorani Qaida' ? 'bg-white/30' : '' }}">
                 Noorani Qaida
             </a>
 
-            <a href="{{ route('courses.category', 'tajweed') }}"
+            <a href="{{ route('courses.categories', 'tajweed') }}"
                class="px-4 py-2 rounded-lg border border-white/30 bg-white/10 hover:bg-white/20 transition-all duration-300 text-sm md:text-base {{ $categoryTitle == 'Tajweed' ? 'bg-white/30' : '' }}">
                 Tajweed
             </a>
 
-            <a href="{{ route('courses.category', 'hifz') }}"
+            <a href="{{ route('courses.categories', 'hifz') }}"
                class="px-4 py-2 rounded-lg border border-white/30 bg-white/10 hover:bg-white/20 transition-all duration-300 text-sm md:text-base {{ $categoryTitle == 'Hifz' ? 'bg-white/30' : '' }}">
                 Hifz Program
             </a>

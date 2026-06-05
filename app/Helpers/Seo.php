@@ -42,7 +42,7 @@ class Seo
 
     public static function ogImage()
     {
-        return asset('images/og-image.jpg');
+        return asset('images/og-image.jpeg');
     }
 
     public static function ogUrl()

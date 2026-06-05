@@ -7,7 +7,6 @@ use App\Http\Controllers\HowItWorksController;
 use App\Http\Controllers\FreeTrialController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\LibraryController;
 use App\Models\Course;
 
 /*
@@ -47,9 +46,7 @@ Route::redirect('/contact-us', '/contact', 301);
 | Courses
 |--------------------------------------------------------------------------
 */
-Route::get('/courses/category/{slug}', [CourseController::class, 'byCategory'])->name('courses.category');
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
-
 Route::get('/courses/{slug}', [CourseController::class, 'show'])
     ->where('slug', '[a-z0-9\-]+')
     ->name('courses.show');
@@ -76,6 +73,7 @@ Route::post('/free-trial/book', [FreeTrialController::class, 'book'])->name('fre
 */
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/search', [BlogController::class, 'search'])->name('blog.search');
+Route::get('/blog/categories/{category}', [BlogController::class, 'category'])->name('blog.category');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 /*

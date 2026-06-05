@@ -10,8 +10,8 @@
 
 @section('meta_description', Str::limit(strip_tags($course->short_description), 160))
 
-@section('meta_keywords', 'online Quran course, Quran learning, ' . $course->title . ', Tajweed, Hifz, Quran academy')
-
+@section('meta_keywords', 'online Quran course, ilm e quran, ilm ul quran, Quran learning, ' . $course->title . ', Tajweed, Hifz, Quran academy')
+<x-json-ld :data="\App\Services\SeoSchemaService::course($course->title, $course->short_description, $course->slug)" />
 @section('content')
 
     <!-- OPEN GRAPH -->
@@ -29,10 +29,10 @@
 
         <div class="max-w-6xl mx-auto px-4">
 
-            <span class="inline-block bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-sm font-semibold mb-3">
-                {{ ucfirst($course->level) }}
-            </span>
-
+            <!-- CATEGORY BADGE (UPDATED) -->
+        <span class="inline-block bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+            {{ $course->category->name ?? 'Course' }}
+        </span>
             <h1 class="text-3xl md:text-5xl font-bold mb-3">
                 {{ $course->title }}
             </h1>

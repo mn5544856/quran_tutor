@@ -39,7 +39,7 @@
         <div class="p-6 shadow rounded text-center">
             <h3 class="font-bold text-xl mb-2">WhatsApp</h3>
             <p>+92 336 53085030</p>
-            <a href="https://wa.me/923001234567" target="_blank"
+            <a href="https://wa.me/009233653085030" target="_blank"
                class="text-green-700 font-semibold">Message</a>
         </div>
 

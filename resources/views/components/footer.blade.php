@@ -27,7 +27,7 @@
                     Learn Quran online with a dedicated personal teacher. One-on-one classes in Tajweed, Hifz, and Quran reading.
                 </p>
 
-                <!-- SOCIAL LINKS -->
+                {{-- <!-- SOCIAL LINKS -->
                 <div class="flex gap-3">
 
                     <a href="https://facebook.com/yourpage"
@@ -62,7 +62,7 @@
                         y
                     </a>
 
-                </div>
+                </div> --}}
 
             </div>
 

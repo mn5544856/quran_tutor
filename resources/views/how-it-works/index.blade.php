@@ -4,7 +4,7 @@
 
 @section('meta_description', 'Learn how online Quran classes work at Ilm e Quran Quran Academy. Simple 3-step process: free trial, teacher introduction, and personalized Quran learning with expert tutors.')
 
-@section('meta_keywords', 'how Quran classes work, online Quran learning process, Quran academy steps, free Quran trial, Quran teacher online, Tajweed learning process, Hifz online classes')
+@section('meta_keywords', 'how Quran classes work,ilm e quran, ilm ul quran, online Quran learning process, Quran academy steps, free Quran trial, Quran teacher online, Tajweed learning process, Hifz online classes')
 
 @section('content')
 
