@@ -148,7 +148,7 @@
                 </h3>
                 <div class="space-y-2">
                     @foreach($categories as $cat)
-                    <a href="{{ route('blog.categories', $cat->slug) }}" 
+                    <a href="{{ route('blog.category', $cat->slug) }}" 
                        class="flex justify-between items-center py-2 px-3 rounded-lg transition-all
                               {{ $category->id == $cat->id ? 'bg-green-50 text-green-700 font-semibold' : 'hover:bg-gray-50' }}">
                         <span>{{ $cat->name }}</span>

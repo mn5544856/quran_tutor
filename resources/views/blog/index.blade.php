@@ -70,7 +70,7 @@
                                         
                                         <!-- Category Badge -->
                                         @if($post->category)
-                                            <a href="{{ route('blog.categories', $post->category->slug) }}" 
+                                            <a href="{{ route('blog.category', $post->category->slug) }}" 
                                                class="inline-block bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full text-xs font-semibold mb-2 hover:bg-emerald-200 transition">
                                                 {{ $post->category->name }}
                                             </a>
@@ -210,7 +210,7 @@
                     
                     <div class="space-y-2 mt-3">
                         @foreach($sidebarCategories as $category)
-                        <a href="{{ route('blog.categories', $category->slug) }}" 
+                        <a href="{{ route('blog.category', $category->slug) }}" 
                            class="flex justify-between items-center p-2 rounded-lg hover:bg-gray-50 transition group">
                             <span class="text-gray-700 text-sm group-hover:text-emerald-600">{{ $category->name }}</span>
                             <span class="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">{{ $category->posts_count }}</span>
