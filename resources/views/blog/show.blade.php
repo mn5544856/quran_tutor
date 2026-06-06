@@ -4,10 +4,18 @@
 @section('meta_description', $post->seo_description ?? Str::limit(strip_tags($post->content), 160))
 @section('meta_keywords', $post->category->name ?? 'Islamic Education, Quran Learning')
 
+{{-- Dynamic Open Graph Tags for Blog Listing --}}
+@section('og_title', $post->og_title ?? (isset($search) ? "Search Results: {$search}" : ($category->name ?? ($tag->name ?? 'Islamic Blog | Learn Quran & Islamic Education'))))
+@section('og_description', isset($search) 
+    ? "Search results for '{$search}' - Find Islamic articles and Quran learning resources" 
+    : ($category->description ?? ($tag->description ?? 'Discover authentic Islamic knowledge, Quran learning tips, and educational content for all ages.')))
+@section('og_image', asset('images/blog-og-image.jpg'))
+@section('og_url', url()->current())
+@section('og_type', $post->og_type ?? 'article')
 @section('content')
 
 <!-- HERO HEADER - Enhanced -->
-<section class="relative bg-gradient-to-r from-green-900 to-emerald-900 text-white py-20 overflow-hidden">
+<section class="relative bg-linear-to-r from-green-900 to-emerald-900 text-white py-20 overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
@@ -16,7 +24,7 @@
     <div class="relative max-w-7xl mx-auto px-4 text-center">
         <!-- Category Badge -->
         @if($post->category)
-        <a href="{{ route('blog.categories', $post->category->slug) }}" 
+        <a href="{{ route('blog.category', $post->category->slug) }}" 
            class="inline-block bg-emerald-500/20 backdrop-blur-sm text-emerald-200 px-4 py-2 rounded-full text-sm font-semibold mb-6 hover:bg-emerald-500/30 transition">
             {{ $post->category->name }}
         </a>
@@ -67,21 +75,30 @@
     <div class="max-w-7xl mx-auto px-4">
         
         <!-- Breadcrumb -->
-        <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
-            <a href="{{ route('blog.index') }}" class="hover:text-emerald-600">Home</a>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-            @if($post->category)
-            <a href="{{ route('blog.categories', $post->category->slug) }}" class="hover:text-emerald-600">
-                {{ $post->category->name }}
-            </a>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-            @endif
-            <span class="text-gray-700">{{ Str::limit($post->title, 50) }}</span>
-        </nav>
+<nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+    <a href="{{ route('home') }}" class="hover:text-emerald-600">Home</a>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    
+    @if(request()->routeIs('blog.show'))
+        <a href="{{ route('home') }}" class="hover:text-emerald-600">Blog</a>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    @endif
+    
+    @if($post->category)
+        <a href="{{ route('blog.category', $post->category->slug) }}" class="hover:text-emerald-600">
+            {{ $post->category->name }}
+        </a>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    @endif
+    
+    <span class="text-gray-700">{{ Str::limit($post->title, 50) }}</span>
+</nav>
         
         <!-- Two Column Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -90,9 +107,9 @@
             <div class="lg:col-span-8">
                 
                 <!-- Featured Image -->
-                @if($post->featured_image)
+                @if($post->image_url)
                 <div class="mb-8 overflow-hidden rounded-2xl shadow-lg">
-                    <img src="{{ asset($post->featured_image) }}" 
+                    <img src="{{ asset($post->image_url) }}" 
                          alt="{{ $post->title }}"
                          class="w-full object-cover transform hover:scale-105 transition-transform duration-500">
                 </div>
@@ -138,7 +155,7 @@
                                     prose-ol:list-decimal
                                     prose-li:my-2">
                             
-                            {!! $post->content_html ?? $post->content !!}
+                            {!! $post->description_html ?? $post->description !!}
                             
                         </div>
                         
@@ -150,7 +167,7 @@
                                 <div class="flex items-center gap-3">
                                     <span class="font-medium text-gray-700">Category:</span>
                                     @if($post->category)
-                                    <a href="{{ route('blog.categories', $post->category->slug) }}" 
+                                    <a href="{{ route('blog.category', $post->category->slug) }}" 
                                        class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm hover:bg-emerald-200 transition">
                                         {{ $post->category->name }}
                                     </a>
@@ -232,14 +249,14 @@
                 @if(isset($relatedPosts) && $relatedPosts->count() > 0)
                 <div class="mt-12">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                        <span>📚</span> You May Also Like
+                        <span>📚</span> Related articles
                     </h3>
                     <div class="grid md:grid-cols-3 gap-6">
                         @foreach($relatedPosts as $related)
                         <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
-                            @if($related->featured_image)
+                            @if($related->image_url)
                             <div class="h-40 overflow-hidden">
-                                <img src="{{ asset($related->featured_image) }}" 
+                                <img src="{{ asset($related->image_url) }}" 
                                      alt="{{ $related->title }}"
                                      class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                             </div>
@@ -295,7 +312,7 @@
     
     <div class="space-y-2 mt-4">
         @forelse($categories as $cat)
-        <a href="{{ route('blog.categories', $cat->slug) }}" 
+        <a href="{{ route('blog.category', $cat->slug) }}" 
            class="flex justify-between items-center p-2 rounded-lg hover:bg-gray-50 transition group">
             <span class="text-gray-700 group-hover:text-emerald-600">{{ $cat->name }}</span>
             <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{{ $cat->posts_count }}</span>
@@ -324,8 +341,8 @@
                         <a href="{{ route('blog.show', $popular->slug) }}" 
                            class="block group hover:bg-gray-50 p-2 rounded-lg transition">
                             <div class="flex gap-3">
-                                @if($popular->featured_image)
-                                <img src="{{ asset($popular->featured_image) }}" 
+                                @if($popular->image_url)
+                                <img src="{{ asset($popular->image_url) }}" 
                                      alt="{{ $popular->title }}"
                                      class="w-16 h-16 object-cover rounded-lg">
                                 @else
@@ -388,7 +405,7 @@
                 </div>
                 
                 {{-- <!-- Newsletter Widget -->
-                <div class="bg-gradient-to-r from-emerald-600 to-green-700 rounded-xl shadow-md p-6 text-white">
+                <div class="bg-linear-to-r from-emerald-600 to-green-700 rounded-xl shadow-md p-6 text-white">
                     <h3 class="text-xl font-bold mb-3">📧 Subscribe</h3>
                     <p class="text-sm text-emerald-100 mb-4">Get latest posts delivered to your inbox</p>
                     <form action="{{ route('newsletter.subscribe') ?? '#' }}" method="POST">
@@ -412,7 +429,7 @@
 </section>
 
 <!-- CTA SECTION -->
-<section class="relative bg-gradient-to-r from-green-900 to-emerald-900 text-white py-20 overflow-hidden">
+<section class="relative bg-linear-to-r from-green-900 to-emerald-900 text-white py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
     </div>

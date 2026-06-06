@@ -45,4 +45,8 @@ class Course extends Model
     {
         return $this->belongsTo(CourseCategory::class, 'category_id');
     }
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class)->withTimestamps();
+    }
 }

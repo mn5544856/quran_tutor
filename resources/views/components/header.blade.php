@@ -1,6 +1,6 @@
 <!-- resources/views/components/header.blade.php -->
 
-<header class="sticky top-0 z-50 bg-gradient-to-r from-[#0a5c36] to-[#0a7c46] shadow-lg" role="banner">
+<header class="sticky top-0 z-50 bg-linear-to-r from-[#0a5c36] to-[#0a7c46] shadow-lg" role="banner">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

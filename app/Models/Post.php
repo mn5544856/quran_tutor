@@ -12,7 +12,7 @@ class Post extends Model
         'content',
         'content_html',
         'excerpt',
-        'featured_image',
+        'image_url',
         'seo_title',
         'seo_description',
         'status',

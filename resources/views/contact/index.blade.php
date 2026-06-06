@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- HERO -->
-<section class="relative bg-gradient-to-r from-[#0a5c36] to-[#0a7c46] text-white py-16 md:py-20 overflow-hidden">
+<section class="relative bg-linear-to-r from-[#0a5c36] to-[#0a7c46] text-white py-16 md:py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
         <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1350&q=80"
              class="w-full h-full object-cover" alt="Background">
@@ -136,7 +136,7 @@
 <!-- CTA -->
 <section class="container mx-auto px-4 max-w-5xl py-16">
 
-    <div class="bg-gradient-to-r from-[#0a5c36] to-[#0a7c46] text-white rounded-2xl py-12 px-6 text-center">
+    <div class="bg-linear-to-r from-[#0a5c36] to-[#0a7c46] text-white rounded-2xl py-12 px-6 text-center">
 
         <h2 class="text-3xl font-bold mb-4">
             Start Your Learning Journey Today

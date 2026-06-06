@@ -11,7 +11,7 @@
 
 
     <!-- HERO SECTION -->
-    <section class="bg-gradient-to-r from-green-900 to-green-700 text-white py-20 text-center">
+    <section class="bg-linear-to-r from-green-900 to-green-700 text-white py-20 text-center">
         <div class="max-w-5xl mx-auto px-4">
 
             <h1 class="text-3xl md:text-5xl font-bold leading-tight">

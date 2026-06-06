@@ -49,7 +49,7 @@
                     <article
                         class="course-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
                         <div class="relative h-56 overflow-hidden">
-                            <img loading="lazy" src="{{ $course->image_url ?? asset('images/course-placeholder.jpg') }}"
+                            <img loading="lazy" src="{{ asset($course->image_url) ?? asset('images/course-placeholder.jpg') }}"
                                 alt="{{ $course->title }}"
                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                             <div class="absolute top-4 left-4 flex gap-2">

@@ -4,15 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     public function run()
     {
         $this->call([
-            
+            CourseCategorySeeder::class,
             CourseSeeder::class,
-            BookSeeder::class,
-            // ... other seeders you have
+            PostSeeder::class,
+            PostCategorySeeder::class,
+            TagSeeder::class,
         ]);
     }
 }

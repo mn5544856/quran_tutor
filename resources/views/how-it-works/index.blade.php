@@ -11,7 +11,7 @@
 
 
 <!-- HERO -->
-<section class="relative bg-gradient-to-r from-[#0a5c36] to-[#0a7c46] text-white py-16 overflow-hidden">
+<section class="relative bg-linear-to-r from-[#0a5c36] to-[#0a7c46] text-white py-16 overflow-hidden">
 
     <div class="container mx-auto px-4 max-w-7xl text-center">
 

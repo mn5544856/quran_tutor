@@ -55,10 +55,10 @@
                             <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group">
                                 <div class="md:flex">
                                     <!-- Featured Image -->
-                                    @if($post->featured_image)
+                                    @if($post->image_url)
                                         <div class="md:w-1/3 overflow-hidden">
                                             <a href="{{ route('blog.show', $post->slug) }}">
-                                                <img src="{{ asset($post->featured_image) }}" 
+                                                <img src="{{ asset($post->image_url) }}" 
                                                      alt="{{ $post->title }}"
                                                      class="w-full h-32 md:h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                             </a>
@@ -239,8 +239,8 @@
                         <a href="{{ route('blog.show', $popular->slug) }}" 
                            class="block group hover:bg-gray-50 p-2 rounded-lg transition">
                             <div class="flex gap-3">
-                                @if($popular->featured_image)
-                                <img src="{{ asset($popular->featured_image) }}" 
+                                @if($popular->image_url)
+                                <img src="{{ asset($popular->image_url) }}" 
                                      alt="{{ $popular->title }}"
                                      class="w-12 h-12 object-cover rounded-lg">
                                 @else
@@ -310,7 +310,7 @@
 </section>
 
 <!-- CTA Section -->
-<section class="bg-gradient-to-r from-green-900 to-emerald-900 text-white py-12">
+<section class="bg-linear-to-r from-green-900 to-emerald-900 text-white py-12">
     <div class="max-w-6xl mx-auto text-center px-4">
         <h2 class="text-2xl md:text-3xl font-bold mb-3">Want to Learn Quran Online?</h2>
         <p class="text-emerald-100 mb-6 text-base">

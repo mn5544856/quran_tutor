@@ -54,6 +54,7 @@ class BlogController extends Controller
             ->firstOrFail();
 
         // Increment view count
+
         $post->increment('views');
 
         // Get sidebar data
@@ -69,12 +70,9 @@ class BlogController extends Controller
         $previousPost = $this->getPreviousPost($post);
         $nextPost = $this->getNextPost($post);
 
-        // Markdown → HTML
-        $post->content_html = $this->convertMarkdownToHtml($post->content);
         $categories = $this->getAllCategories();
         // SEO Data
         $seo = $this->getSeoData($post);
-
         return view('blog.show', array_merge(
             compact('post', 'relatedPosts', 'categories', 'previousPost', 'nextPost', 'seo'),
             $sidebarData
@@ -270,7 +268,7 @@ class BlogController extends Controller
         return [
             'title' => $post->seo_title ?? $post->title,
             'description' => $post->seo_description ?? $post->excerpt ?? Str::limit(strip_tags($post->content), 160),
-            'image' => $post->featured_image,
+            'image' => $post->image_url,
         ];
     }
 
