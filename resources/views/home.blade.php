@@ -115,7 +115,7 @@
                            class="block bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 group cursor-pointer">
 
                             <div class="h-48 overflow-hidden relative">
-                                <img src="{{ $course->image_url }}"
+                                <img src="{{ asset($course->image_url) }}"
                                     alt="{{ $course->title }}"
                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                                     loading="lazy">

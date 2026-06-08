@@ -6,21 +6,21 @@
     $courseUrl = url()->current();
 @endphp
 
-@section('title', $course->title . ' | Online Quran Course - Ilm e Quran Quran Academy')
+@section('title', $course->meta_title . ' | Online Quran Course - Ilm e Quran Quran Academy')
 
-@section('meta_description', Str::limit(strip_tags($course->short_description), 160))
+@section('meta_description', Str::limit(strip_tags($course->meta_description), 160))
 
-@section('meta_keywords', 'online Quran course, ilm e quran, ilm ul quran, Quran learning, ' . $course->title . ', Tajweed, Hifz, Quran academy')
-<x-json-ld :data="\App\Services\SeoSchemaService::course($course->title, $course->short_description, $course->slug)" />
+@section('meta_keywords', $course->meta_keywords ??'online Quran course, ilm e quran, ilm ul quran, Quran learning, ' . $course->title . ', Tajweed, Hifz, Quran academy')
+<x-json-ld :data="$course->schema_markup" />
 @section('content')
 
     <!-- OPEN GRAPH -->
     @section('head')
-        <meta property="og:title" content="{{ $course->title }}">
-        <meta property="og:description" content="{{ Str::limit(strip_tags($course->short_description), 160) }}">
-        <meta property="og:image" content="{{ $course->image_url }}">
-        <meta property="og:url" content="{{ $courseUrl }}">
-        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ $course->og_title  }}">
+        <meta property="og:description" content="{{ $course->og_description }}">
+        <meta property="og:image" content="{{ $course->og_image_url }}">
+        <meta property="og:url" content="{{ $course->cononical_url}}">
+        <meta property="og:type" content="Course">
     @endsection
 
     <!-- HERO -->
